@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnly Affiliate Program - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inline CSS for the login page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #ff9900;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e68a00;
+        }
+
+        .google-login {
+            background-color: #db4437;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .google-login:hover {
+            background-color: #c33c2e;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .or-separator {
+            text-align: center;
+            margin: 20px 0;
+            color: #888;
+        }
+    </style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> <!-- reCAPTCHA JS file -->
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Earnly Affiliate Program</h2>
+
+        <!-- Google Login Button -->
+        <button class="google-login">
+            <img src="google-logo.png" alt="Google Icon" style="width: 20px; vertical-align: middle;">
+            Continue with Google
+        </button>
+
+        <div class="or-separator">or</div>
+
+        <!-- Login Form -->
+        <form action="home.html" method="post">
+            <label for="email">Mobile Number / Email ID:</label>
+            <input type="text" id="email" name="email" placeholder="Enter Mobile Number or Email ID" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+
+            <!-- reCAPTCHA widget -->
+            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+
+            <input type="submit" value="Continue">
+        </form>
+
+        <p>Don't have an account? <a href="#">Sign up here</a></p>
+    </div>
+    
+</body>
+
+</html>
